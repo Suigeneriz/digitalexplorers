@@ -98,12 +98,33 @@ class AdminMasterController extends Controller
     /**
      * Generate one new word
      *
+     * @return String numer   
+     */
+    public static function randNumber($length)
+    {
+
+        return substr(str_shuffle("1234567890"),0,$length);
+    }
+    /**
+     * Generate one new word
+     *
      * @return String date   
      */
     public static function randDate()
     {
         $timestamp = rand( strtotime("Jan 01 1991"), strtotime("Nov 01 2018") );
 		return date("d.m.Y", $timestamp );
+    }
+
+    /**
+     * Generate one new word
+     *
+     * @return String date   
+     */
+    public static function randDateTwo()
+    {
+        $timestamp = rand( strtotime("Jan 01 1991"), strtotime("Nov 01 2018") );
+		return date("Y", $timestamp );
     }
 
     /**

@@ -24,6 +24,7 @@ class CreateCompanyDetailsTable extends Migration
             $table->string('turnover');
             $table->integer('social_media_likes');
             $table->integer('social_media_followers');
+            $table->string('year');
             $table->timestamps();
         });
     }

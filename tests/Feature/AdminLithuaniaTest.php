@@ -18,11 +18,17 @@ class AdminLithuania extends TestCase
         $this->withoutExceptionHandling();
     }
    
-    public function testCan_generate_Company_record()
+    // public function testCan_generate_Company_record()
+    // {
+    //     $response = $this->post('/generateCompanyRcords');
+
+    //     $response->assertStatus(201);
+    // }
+
+    public function testCan_generate_Company_Details()
     {
-        $response = $this->post('/generateCompanyRcords');
+        $response = $this->post('/generateCompanyDetails');
 
         $response->assertStatus(201);
-        //$response->assertSee("Laravel");
     }
 }

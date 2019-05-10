@@ -113,4 +113,27 @@ class CompanyController extends Controller
 
           return response()->json([],201);
     }
+
+    public function generateComanyDetails(Request $request)
+    {
+
+         for($i=1; $i < 41; $i++){
+
+             $comany =  new CompanyDetails();
+             $comany->company_id =  $i;
+             $comany->vat =  "LT".AdminMasterController::randNumber(5);
+             $comany->manager =  AdminMasterController::randWord();
+             $comany->employees =  AdminMasterController::randNumber(3);
+             $comany->average_salary =  AdminMasterController::randNumber(4);
+             $comany->social_insurance_taxes =  AdminMasterController::randNumber(5);
+             $comany->turnover =  AdminMasterController::randNumber(6);
+             $comany->social_media_likes =  AdminMasterController::randNumber(6);
+             $comany->social_media_followers =  AdminMasterController::randNumber(6);
+             $comany->year =  AdminMasterController::randDateTwo();
+             $comany->save();
+
+         }
+
+          return response()->json([],201);
+    }
 }

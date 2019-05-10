@@ -19,3 +19,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/generateCompanyRcords', 'CompanyController@generateComanyRecord');
+Route::post('/generateCompanyDetails', 'CompanyController@generateComanyDetails');
