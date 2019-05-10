@@ -15,14 +15,15 @@ class CreateCompanyDetailsTable extends Migration
     {
         Schema::create('company_details', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('company_id');
             $table->string('vat');
             $table->string('manager');
-            $table->string('employees');
+            $table->integer('num_of_employees');
             $table->double('average_salary');
             $table->string('social_insurance_taxes');
             $table->string('turnover');
-            $table->int('social_media_likes');
-            $table->int('social_media_followers');
+            $table->integer('social_media_likes');
+            $table->integer('social_media_followers');
             $table->timestamps();
         });
     }

@@ -18,10 +18,12 @@ class CreateCompaniesTable extends Migration
             $table->string('name');
             $table->string('type');
             $table->text('business_form');
-            $table->int('company_code');
+            $table->integer('company_code');
             $table->string('registration_code');
+            $table->string('email');
             $table->string('address');
             $table->string('mobile');
+            $table->string('avtivation_status');
             $table->string('registration_date');
             $table->timestamps();
         });
