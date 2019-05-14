@@ -15,8 +15,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+//Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'AllCompanyController@index')->name('client-dashboard');
+Route::get('/details/{id}', 'AllCompanyController@show');
+
 Route::post('/generateCompanyRcords', 'CompanyController@generateComanyRecord');
 Route::post('/generateCompanyDetails', 'CompanyController@generateComanyDetails');
+Route::get('/searchCompanyInfo', 'CompanyController@companySearch');
+Route::get('/checkComanyRating', 'CompanyController@showRating');
+Route::get('/chartAnalysis/{value}', 'CompanyController@showCharanAlysis');
+Route::get('/boardview/{date}', 'CompanyController@showBoard');
+

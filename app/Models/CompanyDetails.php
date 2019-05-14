@@ -15,7 +15,7 @@ class CompanyDetails extends Model
     protected $table = 'company_details';
 
     protected $fillable = [
-        'company_id','vat','manager','employees','average_salary','social_insurance_taxes','turnover','social_media_likes','social_media_followers'
+        'company_id','vat','manager','employees','average_salary','social_insurance_taxes','turnover','social_media_likes','social_media_followers','year'
     ];
     /**
      * The attributes that should be hidden for arrays.
@@ -23,4 +23,9 @@ class CompanyDetails extends Model
      * @var array
      */
     protected $hidden = [];
+
+    public function companyInfo()
+    {
+        return $this->belongsTo('App\Models\Company','company_id');
+    }
 }

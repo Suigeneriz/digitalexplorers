@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Company;
 use App\Models\CompanyDetails;
+use App\Models\Rating;
 use App\Http\Controllers\AdminMasterController;
 use Auth;
 use DB;
@@ -51,10 +52,86 @@ class CompanyController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function showRating(Request $request)
     {
-        //
+        $date =  substr($request->date, 0, 4);
+        
+        $allcompany =  CompanyDetails::where('year', '=', $date)->get();
+
+        return view('companyRating', compact('allcompany'));
     }
+    public function showCharanAlysis(Request $request)
+    {
+        //$date =  substr($request->date, 0, 4);
+        
+        //$allcompany =  CompanyDetails::orderBy('year','desc')->get();
+        //$allcompany = CompanyDetails::select('year')->distinct()->orderBy('year','asc')->get();
+        $allcompany =  Rating::get();
+
+        $get_Value = $request->value;
+
+        return view('chatAnalysis', compact('allcompany','get_Value'));
+    }
+    public static function sumCharanAlysis($id,$date)
+    {
+    
+        $allcompany = Rating::where('id', '=', $id)->get();
+
+        $total = 0;
+        foreach ($allcompany as $company) {
+   
+
+                if($date =="turnover"){
+                    $total += $company->turnover;
+                }else if($date =="sales"){
+                    $total += $company->sales;
+                }else if($date =="assets"){
+                    $total += $company->assets;
+                }else if($date =="market_value"){
+                    $total += $company->market_value;
+                }
+
+         
+        }
+
+        return $total;
+    }
+     public function showBoard(Request $request){
+        //$allcompany = Company::orderBy('id','desc')->get();
+        $allcompany = CompanyDetails::where('year', '=', $request->date)->get();
+
+        $dateYear = $request->date;
+        return view('client-board-view-dashboard', compact('allcompany','dateYear'));
+    }
+    /**
+     * Search company record by registration code
+     *
+     */
+    public function companySearch(Request $request)
+    {
+        $allcompany =  Company::where('registration_code', '=', $request->RegistrationCode)->paginate(7);
+
+     
+        //return view('home', compact('bookings'));
+        return view('home', compact('allcompany'));
+    }
+
+    public function importFileIntoDB(Request $request){
+    if($request->hasFile('sample_file')){
+        $path = $request->file('sample_file')->getRealPath();
+        $data = \Excel::load($path)->get();
+        if($data->count()){
+            foreach ($data as $key => $value) {
+                $arr[] = ['name' => $value->name, 'details' => $value->details];
+            }
+            if(!empty($arr)){
+                \DB::table('products')->insert($arr);
+                dd('Insert Record successfully.');
+            }
+        }
+    }
+    dd('Request data does not have any files to import.');      
+} 
 
     /**
      * Show the form for editing the specified resource.
