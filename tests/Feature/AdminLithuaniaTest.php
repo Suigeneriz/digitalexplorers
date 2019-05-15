@@ -25,10 +25,19 @@ class AdminLithuania extends TestCase
     //     $response->assertStatus(201);
     // }
 
-    public function testCan_generate_Company_Details()
-    {
-        $response = $this->post('/generateCompanyDetails');
+    // public function testCan_generate_Company_Details()
+    // {
+    //     $response = $this->post('/generateCompanyDetails');
 
-        $response->assertStatus(201);
+    //     $response->assertStatus(201);
+    // }
+
+    public function testLanding_Page()
+    {
+        $response = $this->get('/');
+
+        $response->assertStatus(200);
+        $response->assertSee("We Evaluate Organization's Value through");
+        $response->assertSee("Outside the box Thinking");
     }
 }

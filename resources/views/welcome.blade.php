@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Fincounts</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
+<head>
+  <title>Fincounts</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="de/css/bootstrap.min.css">
-    <link rel="stylesheet" href="de/css/magnific-popup.css">
-    <link rel="stylesheet" href="de/css/jquery-ui.css">
-    <link rel="stylesheet" href="de/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="de/css/owl.theme.default.min.css">
+  <link href="de/https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="de/fonts/icomoon/style.css">
 
-    <link rel="stylesheet" href="de/css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="de/css/bootstrap.min.css">
+  <link rel="stylesheet" href="de/css/magnific-popup.css">
+  <link rel="stylesheet" href="de/css/jquery-ui.css">
+  <link rel="stylesheet" href="de/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="de/css/owl.theme.default.min.css">
 
-    <link rel="stylesheet" href="de/fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="de/css/bootstrap-datepicker.css">
 
-    <link rel="stylesheet" href="de/css/aos.css">
+  <link rel="stylesheet" href="de/fonts/flaticon/font/flaticon.css">
 
-    <link rel="stylesheet" href="de/css/style.css">
-    
-  </head>
-  <body>
-  
+  <link rel="stylesheet" href="de/css/aos.css">
+
+  <link rel="stylesheet" href="de/css/style.css">
+
+</head>
+
+<body>
+
   <div class="site-wrap">
 
     <div class="site-mobile-menu">
@@ -35,19 +37,20 @@
       </div>
       <div class="site-mobile-menu-body"></div>
     </div>
-   
-          
-          <div class="col-11 col-xl-2" style="position: absolute; z-index: 1; margin-bottom: 2px;">
-            <h1><a href="index.html"><img class="logo" src="de/images/logo.jpeg"> </a></h1>
-          </div>
-         
 
-    <div class="site-blocks-cover overlay" style="background-image: url(de/images/fin15.jpg);" data-aos="fade" data-stellar-background-ratio="1.5">
+
+    <div class="col-11 col-xl-2" style="position: absolute; z-index: 1; margin-bottom: 2px;">
+      <h1><a href="{{url('/')}}"><img class="logo" src="de/images/logo.jpeg"> </a></h1>
+    </div>
+
+
+    <div class="site-blocks-cover overlay bounce-in-right" style="background-image: url(de/images/fin15.jpg);"
+      data-aos="fade" data-stellar-background-ratio="1.5">
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">
 
           <div class="col-md-12" data-aos="fade-up" data-aos-delay="400">
-                        
+
             <div class="row justify-content-center mb-4">
               <div class="col-md-8 text-center">
                 <h1>We Evaluate Organization's Value through<br> <span class="typed-words"></span></h1>
@@ -59,8 +62,7 @@
           </div>
         </div>
       </div>
-    </div>  
-
+    </div>
 
     <section class="section ft-feature-1">
       <div class="container">
@@ -70,37 +72,45 @@
               <div class="col-lg-5">
                 <div class="h-100">
                   <div class="mb-5 d-flex align-items-center">
-                    
+
                     <h2>Fincounts Rating System</h2>
                   </div>
-                  <img style="margin-top:-80px;" src="de/images/fin1.png" alt="Image"class="img-feature img-fluid">
+                  <img src="de/images/fin1.png" alt="Image" class="img-feature img-fluid">
                 </div>
               </div>
               <div class="col-lg-3 ml-auto">
                 <div class="mb-5">
-                  <h3 class="d-flex align-items-center"><span class="icon icon-phonelink mr-2"></span><span>Focus</span></h3>
-                  <p>Leading companies knows what goes they want to acheive and what goals are set before them through value added solutions</p>
-                  
-                </div> 
+                  <h3 class="d-flex align-items-center"><span class="icon icon-phonelink mr-2"></span><span>Focus</span>
+                  </h3>
+                  <p>Leading companies knows what goes they want to acheive and what goals are set before them through
+                    value added solutions</p>
+
+                </div>
 
                 <div>
-                  <h3 class="d-flex align-items-center"><span class="icon icon-extension mr-2"></span><span>Global Mindset</span></h3>
-                  <p>They should have a presence in key fintech ecosystem in order to on top signals of change and help identify potential partners</p>
-                 
+                  <h3 class="d-flex align-items-center"><span class="icon icon-extension mr-2"></span><span>Global
+                      Mindset</span></h3>
+                  <p>They should have a presence in key fintech ecosystem in order to on top signals of change and help
+                    identify potential partners</p>
+
                 </div>
 
               </div>
               <div class="col-lg-3">
                 <div class="mb-5">
-                  <h3 class="d-flex align-items-center"><span class="icon icon-format_paint mr-2"></span><span>Experienced Advisors</span></h3>
-                  <p>When it comes to identifying and establishing partnerships, Leading companies have a network of advisers who can supplement.</p>
-                  
+                  <h3 class="d-flex align-items-center"><span
+                      class="icon icon-format_paint mr-2"></span><span>Experienced Advisors</span></h3>
+                  <p>When it comes to identifying and establishing partnerships, Leading companies have a network of
+                    advisers who can supplement.</p>
+
                 </div>
 
                 <div>
-                  <h3 class="d-flex align-items-center"><span class="icon icon-question_answer mr-2"></span><span>Outside the box Thinking</span></h3>
-                  <p>In todays constant evolving fintech environment, effective partnerships can be established by forging alliance with companies.</p>
-                  
+                  <h3 class="d-flex align-items-center"><span
+                      class="icon icon-question_answer mr-2"></span><span>Outside the box Thinking</span></h3>
+                  <p>In todays constant evolving fintech environment, effective partnerships can be established by
+                    forging alliance with companies.</p>
+
                 </div>
               </div>
             </div>
@@ -108,7 +118,7 @@
         </div>
       </div>
     </section>
-      
+
     <footer class="site-footer">
       <div class="container">
         <div class="row">
@@ -117,7 +127,7 @@
               <div class="col-md-5">
                 <h2 class="footer-heading mb-4">About Us</h2>
                 <p>Fincounts deals with organizational evaluation.</p>
-                  <img class="ft-img" src="de/images/logo.jpeg">
+                <img class="ft-img" src="de/images/logo.jpeg">
               </div>
             </div>
           </div>
@@ -125,7 +135,8 @@
             <h2 class="footer-heading mb-4">Subscribe to our Newsletter</h2>
             <form action="#" method="post">
               <div class="input-group mb-3">
-                <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
+                <input type="text" class="form-control border-secondary text-white bg-transparent"
+                  placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
                 <div class="input-group-append">
                   <button class="btn btn-primary text-white" type="button" id="button-addon2">Send</button>
                 </div>
@@ -133,7 +144,7 @@
             </form>
           </div>
         </div>
-       
+
       </div>
     </footer>
   </div>
@@ -141,29 +152,26 @@
   <script src="de/js/jquery-3.3.1.min.js"></script>
   <script src="de/js/jquery-migrate-3.0.1.min.js"></script>
   <script src="de/js/jquery-ui.js"></script>
-  <script src="de/js/popper.min.js"></script>
   <script src="de/js/bootstrap.min.js"></script>
   <script src="de/js/owl.carousel.min.js"></script>
   <script src="de/js/jquery.stellar.min.js"></script>
-  <script src="de/js/jquery.countdown.min.js"></script>
   <script src="de/js/jquery.magnific-popup.min.js"></script>
-  <script src="de/js/bootstrap-datepicker.min.js"></script>
   <script src="de/js/aos.js"></script>
-
   <script src="de/js/typed.js"></script>
-            <script>
-            var typed = new Typed('.typed-words', {
-            strings: ["Assets","Revenue","Debts","Market Value","TurnOver","Sales","Profit","Customer Review"],
-            typeSpeed: 70,
-            backSpeed: 50,
-            backDelay: 3000,
-            startDelay: 9000,
-            loop: true,
-            showCursor: true
-            });
-            </script>
-
   <script src="de/js/main.js"></script>
-    
-  </body>
+
+  <script>
+    var typed = new Typed('.typed-words', {
+      strings: ["Assets", "Revenue", "Debts", "Market Value", "TurnOver", "Sales", "Profit", "Customer Review"],
+      typeSpeed: 50,
+      backSpeed: 60,
+      backDelay: 2000,
+      startDelay: 1000,
+      loop: true,
+      showCursor: true
+    });
+  </script>
+
+</body>
+
 </html>
